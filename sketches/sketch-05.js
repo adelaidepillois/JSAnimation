@@ -97,12 +97,12 @@ const sketch = ({ context, width, height }) => {
 };
 
 const getGlyph = (v) => {
-  if (v < 50) return '';
-  if (v < 100) return '.';
-  if (v < 150) return '-';
-  if (v < 200) return '+';
+  if (v < 50) return ' ';
+  if (v < 100) return '/';
+  if (v < 150) return '.';
+  if (v < 200) return '°';
 
-  const glyphs = '_= /'.split('');
+  const glyphs = ' :.*'.split('');
 
   return random.pick(glyphs);
 };
