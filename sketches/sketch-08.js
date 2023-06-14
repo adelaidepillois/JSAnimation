@@ -63,7 +63,7 @@ const sketch = ({canvas}) => {
             else context.quadraticCurveTo(curr.x, curr.y, mx, my);
         }
         context.lineWidth = 4;
-        context.strokeStyle = 'blue';
+        context.strokeStyle = 'pink';
         context.stroke();
 
         points.forEach(point => {
@@ -116,7 +116,7 @@ class Point {
     draw(context) {
         context.save();
         context.translate(this.x, this.y);
-        context.fillStyle = this.control ? 'red' : 'black';
+        context.fillStyle = this.control ? 'pink' : 'orange';
         context.beginPath();
         context.arc(0, 0, 10, 0, Math.PI * 2);
         context.fill();
